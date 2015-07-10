@@ -1,0 +1,36 @@
+@contents = {
+  time_periods:
+  [
+    'hogehoge',
+    'hogehoge',
+    'hogehoge',
+    'hogehoge',
+    'hogehoge',
+    'hogehoge',
+    'hogehoge',
+    'hogehoge',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    ''
+  ]
+}
+@test = 'test'

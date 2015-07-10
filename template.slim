@@ -1,0 +1,39 @@
+html
+  head
+    meta charset="UTF-8"
+    link[href="style.css" rel="stylesheet" type="text/css"]
+  body
+    #title
+     | 電子機械システム工学特別研究の学習時間報告
+    - month=5
+    #month
+     | #{month}月
+    #course
+     | 電子機械システム工学専攻 1年
+    #name
+      | 氏名 : 阿部凌磨
+    - dates=31
+    - days=%w(木 金 土 日 月 火 水)
+    div#table
+      table
+        tr
+          th 日
+          th 曜日
+          th 学習時間(時間)
+          th 時限数 
+          th 学習時間数
+          th 内容
+          th 備考(学校行事など)
+          th チェック
+        - (1..dates).each do |date|
+          tr
+            td #{date}
+            td #{days[date%7]}
+            td
+            td
+            td
+            td
+            td
+            td
+
+
