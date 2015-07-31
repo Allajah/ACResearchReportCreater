@@ -32,3 +32,8 @@ def set_final_day(month)
     return month%2 == 0 ? 31 : 30
   end 
 end 
+
+def compute_times_of_period
+  @objects.each do |obejct|
+  end
+end
