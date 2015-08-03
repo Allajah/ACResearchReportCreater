@@ -4,7 +4,6 @@ require 'sinatra/reloader'
 require 'pry'
 require 'csv'
 get '/' do
-  binding.pry
   slim:index
 end
 
@@ -15,6 +14,7 @@ get '/:month' do
   set_first_day(@requested_month)
   @finalday = set_final_day(@requested_month)
   @objects=CSV.read("csv/#{@requested_month}.csv")
+  compute_times_of_period(@objects)
   slim:output
 end
 
@@ -33,7 +33,13 @@ def set_final_day(month)
   end 
 end 
 
-def compute_times_of_period
-  @objects.each do |obejct|
+def compute_times_of_period(objects)
+  @times_of_period = Array.new
+  objects.each do |object|
+    if object[0] == nil
+      @times_of_period.push(0)
+    elsif
+      @times_of_period.push(object[0].split("，").length)
+    end
   end
 end

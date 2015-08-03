@@ -28,16 +28,16 @@ html
             td #{date}
             td #{@days[(@first_day_num+i)%7]}
             td #{object[0]}
-            td 
-            td 
+            td #{@times_of_period[i]}
+            td #{@times_of_period[i]*52.5}
             td #{object[1]}
             td #{object[2]}
-            td
+            td 
             - i+=1
         tr
           th(colspan="3") 合計時間数
-          th 
-          th 
+          th #{@times_of_period.inject{|sum,n| sum+n}}
+          th #{@times_of_period.inject{|sum,n| sum+n}*52.5}
           th 
           th 
           th 
