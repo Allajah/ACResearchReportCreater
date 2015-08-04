@@ -18,6 +18,11 @@ get '/:month' do
   slim:output
 end
 
+post '/create' do
+  @req_year = params[:year]
+  @req_month = params[:month]
+  slim:create
+end
 def set_first_day(month)
   year = 2015
   date = 1
